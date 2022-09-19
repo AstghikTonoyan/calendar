@@ -1,0 +1,132 @@
+* {
+            box-sizing: border-box;
+        }
+        
+        html {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            height: 100vh;
+            user-select: none;
+        }
+        
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        ul {
+            list-style-type: none;
+            
+        }
+        
+        .month {
+            padding: 70px 25px;
+            width: 100%;
+            background-color: #ffffff;
+            text-align: center;
+            
+        }
+        
+        .month .prev {
+            float: left;
+            padding-top: 20px;
+            cursor: pointer;
+            color:#ffffff;
+            background-color: #2C3E50
+        }
+        
+        .month .next {
+            height: 50px;
+            width: 100px;
+            float: left;
+            padding-top: 20px;
+            cursor: pointer;
+            color:#ffffff;
+            background-color: #2C3E50;
+
+        }
+        .today {
+            height: 50px;
+            width: 100px;
+            font-size: 20px;
+            float: right;
+            padding-top: 20px;
+            cursor: pointer;
+            color:#ffffff;
+           
+        }
+        
+        .month ul {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .month ul li {
+            color: rgb(0, 0, 0);
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 900;
+        }
+        
+        .weekdays {
+            margin: 0;
+            padding: 10px 0;
+            background-color: rgb(255, 255, 255);
+        }
+        
+        .weekdays li {
+            display: inline-block;
+            width: 12.6%;
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+        
+        .days {
+            padding: 10px 0;
+            background-color: rgb(255, 255, 255);
+            margin: 0;
+        }
+        
+        .days li {
+            display: inline-block;
+            width: 13.6%;
+            text-align: center;
+            margin-bottom: 5px;
+            font-size: 15px;
+            color: rgb(0, 0, 0);
+        }
+       
+
+        /* lets add some active class  for current date*/
+        .active{
+            padding: 5px;
+            background-color: #d4d1be;
+            color: white;
+        }
+        /*  TO make it responsive lets add some media queries */
+        
+        @media screen and (max-width:720px) {
+            .weekdays li,
+            .days li {
+                width: 13.1%;
+            }
+        }
+        
+        @media screen and (max-width:420px) {
+            .weekdays li,
+            .days li {
+                width: 12.1%;
+            }
+            .days li .active{
+                padding: 2px;
+            }
+        }
+        
+        @media screen and (max-width:290px) {
+            .weekdays li,
+            .days li {
+                width: 12.2%;
+            }
+        }
